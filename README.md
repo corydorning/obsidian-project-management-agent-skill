@@ -23,7 +23,7 @@ The agent inspects the actual folder casing and existing projects first. New pro
 
 Local Codex installation and another agent's hosted Skills workspace are separate operations. Installing in one does not confirm installation in the other.
 
-This package uses independently written instructions and templates. No release license has been selected; no upstream text or license was used as permission for this release.
+This package uses independently written instructions and templates and is released under the [MIT License](LICENSE).
 
 ## Validation and limits
 
