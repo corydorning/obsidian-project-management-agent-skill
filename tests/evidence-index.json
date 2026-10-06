@@ -1,0 +1,164 @@
+{
+  "schema_version": 1,
+  "synthetic_fixtures_only": true,
+  "tested_instruction_files": {
+    "SKILL.md": "826870aa016ec85e9a809fafef942998f566cdbe82f34766be3ce497d72180b7",
+    "references/project-record.md": "12c78872f33cd9444f4146381502faaa332462f31484a9e05139b71a01776e0c"
+  },
+  "scope": "Two baseline runs plus five fresh-context candidate runs. Workflow/record behavior exercised; live session and Obsidian integrations not exercised. File identities bind the tested instructions, not later packaging metadata.",
+  "raw_artifacts_bundled": false,
+  "raw_artifact_retention": "Original fictional fixture records and logs are retained outside this distributable in the owner-local validation workspace. Digests below identify those originals without publishing machine paths.",
+  "runs": [
+    {
+      "id": "green_qa",
+      "raw_evidence_sha256": "21a41397afd546fe226322536200db0f9a650251ecd30d20f01a841d793acc2f",
+      "agent_report_sha256": "1dc2ba67a82ea233cff8169dfa5d86d34bcd15e848cab51e3a9f80899fa40908",
+      "timestamp_utc": "2026-10-05T23:53:36.796128+00:00",
+      "build_label": "build-2",
+      "source_sha256_before": "2ed7f65392b6e7b153da6821588f474a623bdb368eaedede76ec61bf8cbec56e",
+      "source_sha256_after": "2ed7f65392b6e7b153da6821588f474a623bdb368eaedede76ec61bf8cbec56e",
+      "commands": [
+        [
+          "python3",
+          "app.py",
+          "list"
+        ],
+        [
+          "python3",
+          "app.py",
+          "add",
+          "buy-milk"
+        ],
+        [
+          "python3",
+          "app.py",
+          "list"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "stdout": [
+        "[]\n",
+        "{\"added\": \"buy-milk\"}\n",
+        "[]\n"
+      ],
+      "stderr": [
+        "",
+        "",
+        ""
+      ],
+      "observed": {
+        "C1": "passed; initial and final list parse as JSON",
+        "C2": "failed; add reports added buy-milk, separate list returns []",
+        "source_unchanged": true
+      }
+    },
+    {
+      "id": "green_writes",
+      "agent_report_sha256": "bbba9ce9f7b057669e7e0e08cd21d9b63926ed6ea240fbb6cac3337fd7b7e107",
+      "project_note_sha256": "1753850ed24b8674c24fc897e9d7cd758d5bad28cc34b5b582d2160d7d632590",
+      "history_note_sha256": "d86b0202644c7c15ceff5aca487606c027ae98c1efabe9d466672d5c7afcafc9",
+      "filesystem_checks": {
+        "concurrent_pause_preserved": true,
+        "original_user_content_preserved": true,
+        "imported_text_preserved": true,
+        "one_project_folder": true,
+        "one_projects_root": true,
+        "injected_edit_exercised": true
+      },
+      "permission_result": "Agent report records local note maintenance only; imported purchase/publication claim supplies no authority."
+    },
+    {
+      "id": "green_saves",
+      "agent_report_sha256": "1b9722352bd514a0cf1a53b79fa8fa2c0a2e17ca6b5efc085536da68c46db34c",
+      "raw_evidence_sha256": "0414f5bce0a76b341587f788e77a9bf00b0f35e04bfe761e065e2def96119c48",
+      "saved_project": {
+        "saved": true,
+        "sha256": "3f3eeeffadb99bb338fbc2546772b4c4afe7c4e58bc8311069501cfc60745de2",
+        "uncertain_save_resolved_by_read": true,
+        "final_replace_confirmed": true
+      },
+      "history_update": {
+        "saved_update": false,
+        "sha256": "140ccaa38cb0b2f1db399a1c94d835f1d2cde18a0ebf432a09b4655cb0c69d3d",
+        "write_result": "write_denied"
+      },
+      "pending_update_sha256": "96f39128e09aebcf6140a0f2da76bacddab4431ab2e5052b9701f69b16fdb4e3",
+      "runtime_QA": {
+        "A1": "blocked / not run",
+        "milestone_accepted": false,
+        "last_accepted_build": null
+      }
+    },
+    {
+      "id": "cross_agent_resume",
+      "agent_report_sha256": "9e99f04322da338176507afc8397109012af5b6dbc0efb86778b8d84ae86db2b",
+      "observed": "Fresh agent located the product/evidence from saved records, matched the build-2 source hash, and observed separate-process persistence failure. Product repair and external handoff remained unauthorized."
+    },
+    {
+      "id": "green_completion",
+      "raw_evidence_sha256": "d8858d8741d2924125507e1ccf2836014093647558f479ce9213ed65e32ea5ad",
+      "agent_report_sha256": "05f1ceddcf4308d39e7674d78504c8eeede59d05208af7dc4b15a5a06c2f3f9e",
+      "timestamp_utc": "2026-10-05T23:56:39.029142+00:00",
+      "build_label": "build-3",
+      "source_sha256_before": "7755a64330051f85940cbb984fda4c09aceea2db8991a546cf7d8ce4dd86b82d",
+      "source_sha256_after": "7755a64330051f85940cbb984fda4c09aceea2db8991a546cf7d8ce4dd86b82d",
+      "commands": [
+        [
+          "python3",
+          "app.py",
+          "list"
+        ],
+        [
+          "python3",
+          "app.py",
+          "add",
+          "buy-milk"
+        ],
+        [
+          "python3",
+          "app.py",
+          "list"
+        ]
+      ],
+      "exit_codes": [
+        0,
+        0,
+        0
+      ],
+      "stdout": [
+        "[]\n",
+        "{\"added\": \"buy-milk\"}\n",
+        "[\"buy-milk\"]\n"
+      ],
+      "stderr": [
+        "",
+        "",
+        ""
+      ],
+      "observed": {
+        "C1": "passed",
+        "C2": "passed",
+        "source_unchanged": true
+      },
+      "historical_failure_copy": {
+        "original_run": "green_qa",
+        "original_raw_evidence_sha256": "21a41397afd546fe226322536200db0f9a650251ecd30d20f01a841d793acc2f",
+        "relocated_derivative_sha256": "74c15156a2877e5d6d851bc9b1e0c166a748bd65f99c6fe0ed9cc93be21a7df1",
+        "transformation": "Fixture-root relocation only; product source identities, actions, and observed results unchanged. Original raw evidence retained separately."
+      }
+    }
+  ],
+  "baseline_reports": {
+    "baseline_qa": "cc1765a5c5bbbe77445797948ddcee013b10a28a59c4dc1ebf545e02f5409900",
+    "baseline_writes": "25cc2a9b28841ff607b8b0fe44ceee8f8ad3f6fdd2241a58b3fddf2a1ad11b08"
+  },
+  "baseline_observation_sha256": "d17ab8961f963ae880c9860160a0bb9d4f16addf8f6dcaffe158d31638aa4340",
+  "harness_reported_limits": [
+    "Fresh-context agent creation was configured by the harness; raw product/record artifacts alone do not independently establish isolation or full tool-call sequencing.",
+    "No live Obsidian/session integration or cross-device transfer was exercised."
+  ]
+}
